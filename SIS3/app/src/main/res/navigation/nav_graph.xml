@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/clubListFragment">
+
+    <fragment
+        android:id="@+id/clubListFragment"
+        android:name="com.example.sis3.MatchDetailsFragment"
+        android:label="Football Clubs"
+        tools:layout="@layout/fragment_match_details" >
+        <action
+            android:id="@+id/action_clubListFragment_to_clubDetailFragment"
+            app:destination="@id/clubDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/clubDetailFragment"
+        android:name="com.example.sis3.MatchDetailsFragment"
+        android:label="Club Details"
+        tools:layout="@layout/fragment_match_details" >
+        <argument
+            android:name="clubName"
+            app:argType="string" />
+        <argument
+            android:name="clubDescription"
+            app:argType="string" />
+    </fragment>
+
+</navigation>
